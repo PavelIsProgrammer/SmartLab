@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/drawable-v24/btn_add_background.xml" value="0.1915" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/drawable/blocked_btn.xml" value="0.1915" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/drawable/bottom_nav_bar_color.xml" value="0.1915" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/drawable/bottom_sheet_dialog_background.xml" value="0.1915" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/drawable/btn_add_background.xml" value="0.1915" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/drawable/btn_back_background.xml" value="0.1915" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/drawable/btn_circle.xml" value="0.1915" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/drawable/btn_close_background.xml" value="0.1915" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/drawable/btn_go_to_cart.xml" value="0.1915" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/drawable/btn_subscription_background.xml" value="0.1915" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/drawable/button_sign_in_next.xml" value="0.1915" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/drawable/button_sign_in_with_yandex_background.xml" value="0.1915" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/drawable/card_analisis_background.xml" value="0.1915" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/drawable/chip_background.xml" value="0.1915" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/drawable/chip_text_color.xml" value="0.1915" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/drawable/create_password_collected.xml" value="0.1915" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/drawable/create_password_not_collected.xml" value="0.1915" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/drawable/custom_thumb.xml" value="0.1915" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/drawable/custom_track.xml" value="0.1915" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/drawable/edit_text_background.xml" value="0.1915" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/drawable/ic_analyzes.xml" value="0.1915" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/drawable/ic_back_arrow.xml" value="0.1915" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/drawable/ic_camera.xml" value="0.1915" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/drawable/ic_close.xml" value="0.1915" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/drawable/ic_onboarding_image_1.xml" value="0.1915" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/drawable/ic_results.xml" value="0.1915" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/drawable/onboarding_tab_layout_selector.xml" value="0.1915" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/drawable/onboarding_tab_no_selected.xml" value="0.1915" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/drawable/onboarding_tab_selected.xml" value="0.1915" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/drawable/outlined_btn.xml" value="0.1915" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/drawable/patient_background.xml" value="0.1915" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/drawable/progress_drawable.xml" value="0.1915" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/drawable/splash_lights.xml" value="0.1915" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/activity_login.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/activity_main.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/btn_subscription_backgroud.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/chip_time.xml" value="0.31203703703703706" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/fragment_address_bottom_sheet_dialog.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/fragment_analisis_bottom_sheet_dialog.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/fragment_analyzes.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/fragment_cart.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/fragment_create_client_card.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/fragment_create_password.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/fragment_date_time_bottom_sheet_dialog.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/fragment_email_code.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/fragment_error_dialog.xml" value="0.3614583333333333" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/fragment_loading_dialog.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/fragment_new_patient_bottom_sheet_dialog.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/fragment_onboarding.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/fragment_onboarding_pager.xml" value="0.3484375" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/fragment_order_payed.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/fragment_order_register.xml" value="0.3484375" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/fragment_payment.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/fragment_profile.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/fragment_results.xml" value="0.3484375" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/fragment_select_patients_bottom_sheet_dialog.xml" value="0.3484375" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/fragment_sign_in.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/fragment_splash.xml" value="0.3484375" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/fragment_support.xml" value="0.3484375" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/item_analysis.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/item_cart.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/item_category.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/item_order_registration_patient.xml" value="0.3614583333333333" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/item_patient_analysis.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/item_search_result.xml" value="0.3614583333333333" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/item_stock_or_news.xml" value="0.2" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/patient_linear_item.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/patient_spinner_item.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/sex_orientation_drop_down_item.xml" value="0.3614583333333333" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/layout/simple_spinner_item.xml" value="0.3625" />
+        <entry key="..\:/AndroidStudioProjects/SmartLab/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.3625" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

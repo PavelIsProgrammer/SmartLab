@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">SmartLab</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_app_name">Смартлаб</string>
+    <string name="text_skip">Пропустить</string>
+
+    <string name="text_welcome">Добро пожаловать!</string>
+    <string name="text_sign_in_with_email">Вход по E-mail</string>
+    <string name="text_sign_in_description">Войдите, чтобы пользоваться функциями приложения</string>
+    <string name="text_test_email">example@mail.ru</string>
+    <string name="text_next">Далее</string>
+    <string name="text_sign_in_with_yandex">Войти с Яндекс</string>
+    <string name="text_else_sign_in">Или войдите с помощью</string>
+    <string name="text_finish">Завершить</string>
+
+    <string name="network_error">Проблемы с сетью!</string>
+    <string name="text_send_code_again_with_time">Отправить код повторно можно будет через %d секунд</string>
+    <string name="text_get_code_from_email">Введите код из E-mail</string>
+    <string name="text_send_code_again">Отправить код повторно</string>
+    <string name="text_search_analyzes">Искать анализы</string>
+
+    <string-array name="sex_orientation">
+        <item>Мужской</item>
+        <item>Женский</item>
+    </string-array>
+
+    <string name="price_rub">%s ₽</string>
+    <string name="text_save">Сохранить</string>
+    <string name="text_birth_date">Дата рождения</string>
+    <string name="text_lastname">Фамилия</string>
+    <string name="text_midname">Отчество</string>
+    <string name="text_name">Имя</string>
+    <string name="text_client_card_description">Без карты пациента вы не сможете заказать анализы. \n\nВ картах пациентов будут храниться результаты анализов вас и ваших близких.</string>
+    <string name="text_client_card">Карта пациента</string>
+    <string name="text_description">Описание</string>
+    <string name="text_results_time_title">Результаты через:</string>
+    <string name="text_bio_title">Биоматериал:</string>
+    <string name="text_preparation_title">Подготовка</string>
+    <string name="text_add_price">Добавить за %s ₽</string>
+    <string name="text_cancel">Отмена</string>
+    <string name="text_cart">Корзина</string>
+    <string name="text_sum">Сумма</string>
+    <string name="text_go_to_cart">В корзину</string>
+    <string name="text_analyzes_catalog">Каталог анализов</string>
+    <string name="text_news">Акции и новости</string>
+    <string name="text_order_register">Оформление заказа</string>
+    <string name="text_select_date_time">Выберите дату и время</string>
+    <string name="text_select_date_time_title">Дата и время *</string>
+    <string name="text_enter_address">Введите ваш адрес</string>
+    <string name="text_enter_address_title">Адрес *</string>
+    <string name="text_enter_phone">Введите ваш телефон</string>
+    <string name="text_enter_phone_title">Телефон *</string>
+    <string name="text_enter_comment_title">Комментарий</string>
+    <string name="text_enter_comment">Можете оставить свои пожелания</string>
+    <string name="analyzes_quantity">%d анализ</string>
+    <string name="text_connect_bank">Связываемся с банком…</string>
+    <string name="text_confirm_payment">Производим оплату…</string>
+    <string name="text_order_payed_description">Вам осталось дождаться приезда медсестры и сдать анализы. До скорой встречи! \n\nНе забудьте ознакомиться с правилами подготовки к сдаче анализов</string>
+    <string name="text_good">Хорошо</string>
+</resources>

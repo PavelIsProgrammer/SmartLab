@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/analyzes"
+    app:startDestination="@id/analyzesFragment">
+
+    <fragment
+        android:id="@+id/analyzesFragment"
+        android:name="com.petrs.smartlab.ui.fragments.main.analyzes.AnalyzesFragment"
+        android:label="fragment_analyzes"
+        tools:layout="@layout/fragment_analyzes" >
+        <action
+            android:id="@+id/action_analyzesFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.petrs.smartlab.ui.fragments.main.cart.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_cartFragment_to_orderRegisterFragment"
+            app:destination="@id/orderRegisterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderRegisterFragment"
+        android:name="com.petrs.smartlab.ui.fragments.main.order_register.OrderRegisterFragment"
+        android:label="fragment_order_register"
+        tools:layout="@layout/fragment_order_register" >
+        <action
+            android:id="@+id/action_orderRegisterFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.petrs.smartlab.ui.fragments.main.payment.PaymentFragment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment" >
+        <action
+            android:id="@+id/action_paymentFragment_to_orderPayedFragment"
+            app:destination="@id/orderPayedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderPayedFragment"
+        android:name="com.petrs.smartlab.ui.fragments.main.order_payed.OrderPayedFragment"
+        android:label="fragment_order_payed"
+        tools:layout="@layout/fragment_order_payed" >
+        <action
+            android:id="@+id/action_orderPayedFragment_to_analyzesFragment"
+            app:destination="@id/analyzesFragment"
+            app:popUpTo="@id/analyzesFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+</navigation>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/start"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.petrs.smartlab.ui.fragments.start.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_onboardingFragment"
+            app:destination="@id/onboardingFragment" />
+        <action
+            android:id="@+id/action_splashFragment_to_createPasswordFragment"
+            app:destination="@id/createPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="com.petrs.smartlab.ui.fragments.start.onboarding.OnboardingFragment"
+        android:label="fragment_onboarding"
+        tools:layout="@layout/fragment_onboarding" >
+        <action
+            android:id="@+id/action_onboardingFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.petrs.smartlab.ui.fragments.start.sign_in.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signInFragment_to_emailCodeFragment"
+            app:destination="@id/emailCodeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/emailCodeFragment"
+        android:name="com.petrs.smartlab.ui.fragments.start.email_code.EmailCodeFragment"
+        android:label="fragment_email_code"
+        tools:layout="@layout/fragment_email_code" >
+        <argument android:name="email"
+            app:argType="string"
+            app:nullable="false" />
+        <action
+            android:id="@+id/action_emailCodeFragment_to_createPasswordFragment"
+            app:destination="@id/createPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createPasswordFragment"
+        android:name="com.petrs.smartlab.ui.fragments.start.create_password.CreatePasswordFragment"
+        android:label="fragment_create_password"
+        tools:layout="@layout/fragment_create_password" >
+        <action
+            android:id="@+id/action_createPasswordFragment_to_createClientCardFragment"
+            app:destination="@id/createClientCardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createClientCardFragment"
+        android:name="com.petrs.smartlab.ui.fragments.start.client_card.CreateClientCardFragment"
+        android:label="fragment_create_client_card"
+        tools:layout="@layout/fragment_create_client_card" />
+</navigation>

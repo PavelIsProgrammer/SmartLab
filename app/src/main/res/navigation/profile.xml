@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profile"
+    app:startDestination="@id/profileFragment">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.petrs.smartlab.ui.fragments.main.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_createClientCardFragment2"
+            app:destination="@id/createClientCardFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/createClientCardFragment2"
+        android:name="com.petrs.smartlab.ui.fragments.start.client_card.CreateClientCardFragment"
+        android:label="fragment_create_client_card"
+        tools:layout="@layout/fragment_create_client_card" />
+</navigation>

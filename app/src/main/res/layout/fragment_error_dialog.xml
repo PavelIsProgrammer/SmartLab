@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/outlined_btn"
+    android:padding="20dp"
+    android:layout_marginHorizontal="60dp"
+    android:layout_gravity="center">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_error"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        tools:text="Тут будет текст ошибкиaksngnfdndsfhnsdfhnkdfjhsdngksdjgnkjsdngjksdnjg"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_close"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@drawable/filled_btn"
+        app:layout_constraintTop_toBottomOf="@id/tv_error"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:text="@string/text_good"
+        android:outlineSpotShadowColor="@color/transparent"
+        android:outlineAmbientShadowColor="@color/transparent"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        tools:targetApi="p" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
