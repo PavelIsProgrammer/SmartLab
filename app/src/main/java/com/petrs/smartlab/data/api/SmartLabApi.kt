@@ -2,6 +2,8 @@ package com.petrs.smartlab.data.api
 
 import com.petrs.smartlab.data.DataResult
 import com.petrs.smartlab.data.models.*
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import retrofit2.Response
 import retrofit2.http.*
 
@@ -35,6 +37,14 @@ interface SmartLabApi {
         @Header("Authorization") token: String,
         @Body requestBody: UpdateProfileBody
     ): Response<ProfileInfoDTO>
+
+    @Multipart
+    @POST("/api/avatar")
+    suspend fun updateProfilePhoto(
+        @Header("Authorization") token: String,
+        @Part("file") file: RequestBody,
+        @Part("type") type: String
+    ): Response<Unit>
 
     @POST("/api/order")
     suspend fun createOrder(

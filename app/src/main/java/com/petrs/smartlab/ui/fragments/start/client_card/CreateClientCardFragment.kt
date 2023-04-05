@@ -1,7 +1,10 @@
 package com.petrs.smartlab.ui.fragments.start.client_card
 
 import android.content.Intent
+import android.util.Log
+import androidx.core.view.isVisible
 import androidx.core.widget.doAfterTextChanged
+import androidx.navigation.fragment.findNavController
 import com.petrs.smartlab.R
 import com.petrs.smartlab.data.ErrorType
 import com.petrs.smartlab.databinding.FragmentCreateClientCardBinding
@@ -24,6 +27,8 @@ class CreateClientCardFragment :
 
     override fun initView() {
         binding.apply {
+            btnSkip.isVisible = findNavController().backQueue[findNavController().backQueue.lastIndex - 1].destination.id == R.id.createPasswordFragment
+
             etName.doAfterTextChanged {
                 validateInputs()
             }

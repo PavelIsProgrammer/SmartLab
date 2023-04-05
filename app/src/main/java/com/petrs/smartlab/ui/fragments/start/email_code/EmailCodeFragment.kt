@@ -70,7 +70,11 @@ class EmailCodeFragment : BaseFragment<FragmentEmailCodeBinding, EmailCodeViewMo
                 it.isEnabled = false
             }
             btnBack.setOnClickListener {
-                findNavController().popBackStack()
+                while (true) {
+                    if (findNavController().currentDestination?.id != R.id.signInFragment)
+                        findNavController().popBackStack()
+                    else break
+                }
             }
         }
     }
@@ -101,6 +105,8 @@ class EmailCodeFragment : BaseFragment<FragmentEmailCodeBinding, EmailCodeViewMo
                         val errorDialog =
                             ErrorDialog.getInstance(ErrorDialogParams(message))
                         errorDialog.show(childFragmentManager, ErrorDialog.TAG)
+
+                        clearFields()
                     }
                     is DomainResult.Loading -> {
                         if (state.state == LoadingState.REQUEST_LOADING)
@@ -140,6 +146,17 @@ class EmailCodeFragment : BaseFragment<FragmentEmailCodeBinding, EmailCodeViewMo
                     is State.Loading -> {}
                 }
             }
+        }
+    }
+
+    private fun clearFields() {
+        binding.apply {
+            etCode1.setText("")
+            etCode2.setText("")
+            etCode3.setText("")
+            etCode4.setText("")
+
+            etCode1.requestFocus()
         }
     }
 }

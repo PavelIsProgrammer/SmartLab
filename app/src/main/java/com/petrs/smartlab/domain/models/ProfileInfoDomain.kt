@@ -12,5 +12,5 @@ data class ProfileInfoDomain(
     val midName: String,
     val birth: String,
     val sexOrientation: String,
-    val image: String?
+    var image: String?
 ): Parcelable

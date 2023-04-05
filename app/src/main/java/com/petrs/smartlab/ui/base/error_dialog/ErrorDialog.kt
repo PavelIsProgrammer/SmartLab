@@ -1,12 +1,15 @@
 package com.petrs.smartlab.ui.base.error_dialog
 
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.core.os.bundleOf
 import androidx.fragment.app.DialogFragment
+import com.petrs.smartlab.R
 import com.petrs.smartlab.databinding.FragmentErrorDialogBinding
 import kotlinx.parcelize.Parcelize
 
@@ -28,6 +31,7 @@ class ErrorDialog : DialogFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        dialog?.window?.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(requireContext(), R.color.transparent)))
         binding = FragmentErrorDialogBinding.inflate(inflater, container, false)
         return binding.root
     }

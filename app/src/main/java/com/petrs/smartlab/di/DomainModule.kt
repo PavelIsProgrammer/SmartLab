@@ -108,4 +108,11 @@ val domainModule = module {
             sharedPreferencesRepository = get()
         )
     }
+
+    factory {
+        UpdateProfilePhotoUseCase(
+            repository = get(),
+            sharedPreferencesRepository = get()
+        )
+    }
 }

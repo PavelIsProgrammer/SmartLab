@@ -96,7 +96,8 @@ val uiModule = module {
         ProfileViewModel(
             getProfileUseCase = get(),
             updateProfileUseCase = get(),
-            saveProfileUseCase = get()
+            saveProfileUseCase = get(),
+            updateProfilePhotoUseCase = get()
         )
     }
 

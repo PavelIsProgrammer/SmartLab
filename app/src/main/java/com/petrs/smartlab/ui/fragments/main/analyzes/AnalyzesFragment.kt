@@ -128,7 +128,7 @@ class AnalyzesFragment : BaseFragment<FragmentAnalyzesBinding, AnalyzesViewModel
             }
 
             etSearch.doAfterTextChanged {
-                if (!it.isNullOrBlank()) {
+                if (!it.isNullOrBlank() && it.toString().length >= 3) {
                     viewModel.searchItems(it.toString())
                 } else {
                     searchAdapter.submitList(emptyList())
@@ -143,6 +143,7 @@ class AnalyzesFragment : BaseFragment<FragmentAnalyzesBinding, AnalyzesViewModel
                 appBarLayout.isVisible = true
 
                 etSearch.clearFocus()
+                it.hideSoftInput()
             }
 
             btnClearSearch.setOnClickListener {

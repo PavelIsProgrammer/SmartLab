@@ -1,9 +1,11 @@
 package com.petrs.smartlab.ui.base
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModel
@@ -40,6 +42,11 @@ abstract class BaseFragment <VB: ViewBinding, VM: ViewModel>(
 
         initView()
         observeViewModel()
+    }
+
+    protected fun View.hideSoftInput() {
+        val imm = requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(this.windowToken, 0)
     }
 
     protected fun <T> Flow<T>.observe(collector: FlowCollector<T>) {

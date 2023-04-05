@@ -8,6 +8,8 @@ import com.petrs.smartlab.data.ErrorType
 import com.petrs.smartlab.data.api.SmartLabApi
 import com.petrs.smartlab.data.models.*
 import com.petrs.smartlab.domain.repository.SmartLabRepository
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import retrofit2.Response
 import java.io.IOException
 import java.net.HttpURLConnection
@@ -31,6 +33,14 @@ class SmartLabRepositoryImpl(private val api: SmartLabApi) : SmartLabRepository 
         token: String,
         profileBody: UpdateProfileBody
     ) = execRequest { api.updateProfile(token, profileBody) }
+
+    override suspend fun updateProfilePhoto(
+        token: String,
+        file: RequestBody,
+        type: String
+    ): DataResult<Unit> = execRequest {
+        api.updateProfilePhoto(token, file, type)
+    }
 
     override suspend fun createOrder(
         token: String,
