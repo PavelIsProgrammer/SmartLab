@@ -4,6 +4,19 @@ import com.petrs.smartlab.domain.useCases.*
 import org.koin.dsl.module
 
 val domainModule = module {
+
+    factory {
+        ChangeOnboardingStatusUseCase(
+            sharedPreferencesRepository = get()
+        )
+    }
+
+    factory {
+        GetOnboardingStatusUseCase(
+            sharedPreferencesRepository = get()
+        )
+    }
+
     factory {
         SendCodeUseCase(
             repository = get()

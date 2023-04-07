@@ -5,5 +5,6 @@ enum class SharedPreferencesKeys {
     AppPassword,
     Profiles,
     Cart,
-    Addresses
+    Addresses,
+    OnboardingStatus
 }

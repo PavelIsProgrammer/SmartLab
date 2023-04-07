@@ -5,6 +5,7 @@ import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.core.os.bundleOf
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.petrs.smartlab.R
@@ -15,7 +16,8 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class AnalysisBottomSheetDialogParams(
     val analysis: CatalogItemDomain,
-    val onBtnAddClick: () -> Unit
+    val onBtnAddClick: () -> Unit,
+    val onBtnRemoveClick: () -> Unit
 ) : Parcelable
 
 class FragmentAnalysisBottomSheetDialog : BottomSheetDialogFragment() {
@@ -44,11 +46,37 @@ class FragmentAnalysisBottomSheetDialog : BottomSheetDialogFragment() {
             tvPreparation.text = params.analysis.preparation
             tvTime.text = params.analysis.timeResult
             tvBio.text = params.analysis.bio
-            btnAdd.text = getString(R.string.text_add_price, params.analysis.price)
+
+            if (params.analysis.inCart == 0) {
+                initAddBtn()
+            } else {
+                initRemoveBtn()
+            }
 
             btnClose.setOnClickListener { dismiss() }
-            btnAdd.setOnClickListener {
+        }
+    }
+
+    private fun initAddBtn() {
+        binding.btnAdd.apply {
+            text = getString(R.string.text_add_price, params.analysis.price)
+            setTextColor(ContextCompat.getColor(requireContext(), R.color.white))
+            background = ContextCompat.getDrawable(requireContext(), R.drawable.filled_btn)
+            setOnClickListener {
                 params.onBtnAddClick()
+                initRemoveBtn()
+            }
+        }
+    }
+
+    private fun initRemoveBtn() {
+        binding.btnAdd.apply {
+            text = getString(R.string.remove_from_cart)
+            setTextColor(ContextCompat.getColor(requireContext(), R.color.second_blue))
+            background = ContextCompat.getDrawable(requireContext(), R.drawable.outlined_btn)
+            setOnClickListener {
+                params.onBtnRemoveClick()
+                initAddBtn()
             }
         }
     }

@@ -1,18 +1,17 @@
-package com.petrs.smartlab
+package com.petrs.smartlab.ui.fragments.main.order_register.dialogs
 
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.pm.PackageManager
-import android.location.Address
 import android.location.Geocoder
 import android.location.LocationManager
 import android.os.Bundle
 import android.os.Parcelable
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
@@ -20,6 +19,7 @@ import androidx.core.os.bundleOf
 import androidx.core.view.isVisible
 import androidx.core.widget.doAfterTextChanged
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.petrs.smartlab.R
 import com.petrs.smartlab.databinding.FragmentAddressBottomSheetDialogBinding
 import kotlinx.parcelize.Parcelize
 import java.util.*
@@ -126,7 +126,11 @@ class FragmentAddressBottomSheetDialog : BottomSheetDialogFragment() {
                 val geocoder = Geocoder(requireContext(), Locale.getDefault())
                 val addresses = geocoder.getFromLocation(latitude, longitude, 1)
 
-                etAddress.setText(addresses[0].featureName)
+                if (addresses.isNotEmpty()) {
+                    etAddress.setText(addresses[0].featureName)
+                } else {
+                    Toast.makeText(requireContext(), "Извините, мы не смогли автоматически определить ваше местоположение", Toast.LENGTH_SHORT).show()
+                }
             } else {
                 permissionLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION)
             }

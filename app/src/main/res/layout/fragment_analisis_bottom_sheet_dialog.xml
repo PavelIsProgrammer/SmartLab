@@ -135,4 +135,5 @@
         android:background="@drawable/filled_btn"
         android:text="@string/text_add_price"
         app:layout_constraintTop_toBottomOf="@id/tv_bio"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

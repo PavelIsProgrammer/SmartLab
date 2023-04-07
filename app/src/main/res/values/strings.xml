@@ -57,4 +57,5 @@
     <string name="text_confirm_payment">Производим оплату…</string>
     <string name="text_order_payed_description">Вам осталось дождаться приезда медсестры и сдать анализы. До скорой встречи! \n\nНе забудьте ознакомиться с правилами подготовки к сдаче анализов</string>
     <string name="text_good">Хорошо</string>
+    <string name="remove_from_cart">Убрать из корзины</string>
 </resources>

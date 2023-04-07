@@ -51,4 +51,10 @@ class SharedPreferencesHandler(context: Context) {
         val listType = object : TypeToken<List<AddressDTO>>(){}.type
         return if (res.isNullOrEmpty()) emptyList() else Gson().fromJson(res, listType)
     }
+
+    fun changeOnboardingStatus(status: Boolean) =
+        sharedPrefs.edit().putBoolean(SharedPreferencesKeys.OnboardingStatus.name, status).apply()
+
+    fun getOnboardingStatus() =
+        sharedPrefs.getBoolean(SharedPreferencesKeys.OnboardingStatus.name, false)
 }

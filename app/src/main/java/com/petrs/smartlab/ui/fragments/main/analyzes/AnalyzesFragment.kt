@@ -78,13 +78,19 @@ class AnalyzesFragment : BaseFragment<FragmentAnalyzesBinding, AnalyzesViewModel
 
                 override fun onItemClicked(analysis: CatalogItemDomain) {
                     val dialog = FragmentAnalysisBottomSheetDialog.getInstance(
-                        AnalysisBottomSheetDialogParams(analysis) {
+                        AnalysisBottomSheetDialogParams(analysis, onBtnAddClick = {
                             analysis.inCart++
                             viewModel.addInCart(analysis)
                             viewModel.getCatalog()
 
                             binding.rvAnalyzes.adapter = analyzesAdapter
-                        }
+                        }, onBtnRemoveClick = {
+                            analysis.inCart--
+                            viewModel.addInCart(analysis)
+                            viewModel.getCatalog()
+
+                            binding.rvAnalyzes.adapter = analyzesAdapter
+                        })
                     )
 
                     dialog.setStyle(
@@ -142,6 +148,7 @@ class AnalyzesFragment : BaseFragment<FragmentAnalyzesBinding, AnalyzesViewModel
                 rvSearchResults.isVisible = false
                 appBarLayout.isVisible = true
 
+                etSearch.setText("")
                 etSearch.clearFocus()
                 it.hideSoftInput()
             }
@@ -220,14 +227,19 @@ class AnalyzesFragment : BaseFragment<FragmentAnalyzesBinding, AnalyzesViewModel
                 searchAdapter = SearchAdapter(it.first, object : SearchEventListener {
                     override fun onClick(item: CatalogItemDomain) {
                         val dialog = FragmentAnalysisBottomSheetDialog.getInstance(
-                            AnalysisBottomSheetDialogParams(item) {
+                            AnalysisBottomSheetDialogParams(item, onBtnAddClick = {
                                 item.inCart++
                                 viewModel.addInCart(item)
-                                viewModel.getCatalog()
                                 viewModel.getCartSum()
 
                                 binding.rvAnalyzes.adapter = analyzesAdapter
-                            }
+                            }, onBtnRemoveClick = {
+                                item.inCart--
+                                viewModel.addInCart(item)
+                                viewModel.getCartSum()
+
+                                binding.rvAnalyzes.adapter = analyzesAdapter
+                            })
                         )
 
                         dialog.setStyle(

@@ -3,6 +3,9 @@ package com.petrs.smartlab.ui.fragments.start.onboarding
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.petrs.smartlab.R
+import com.petrs.smartlab.domain.DomainResult
+import com.petrs.smartlab.domain.LoadingState
+import com.petrs.smartlab.domain.useCases.ChangeOnboardingStatusUseCase
 import com.petrs.smartlab.ui.fragments.start.onboarding.models.OnboardingData
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -10,10 +13,15 @@ import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
-class OnboardingViewModel : ViewModel() {
+class OnboardingViewModel(
+    private val changeOnboardingStatusUseCase: ChangeOnboardingStatusUseCase
+) : ViewModel() {
 
     private val _isEnd = MutableSharedFlow<Boolean>()
     val isEnd = _isEnd.asSharedFlow()
+
+    private val _onboardingStatus: MutableStateFlow<DomainResult<Unit>> = MutableStateFlow(DomainResult.Loading(LoadingState.INITIAL))
+    val onboardingStatus = _onboardingStatus.asStateFlow()
 
     fun getOnboardingData(): List<OnboardingData> {
         return listOf(
@@ -44,5 +52,9 @@ class OnboardingViewModel : ViewModel() {
                 _isEnd.emit(true)
             }
         }
+    }
+
+    fun changeOnboardingStatus() = viewModelScope.launch {
+        _onboardingStatus.value = changeOnboardingStatusUseCase(true)
     }
 }

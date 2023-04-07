@@ -28,12 +28,15 @@ val uiModule = module {
     viewModel {
         SplashViewModel(
             getAppPasswordUseCase = get(),
-            getTokenUseCase = get()
+            getTokenUseCase = get(),
+            getOnboardingStatusUseCase = get()
         )
     }
 
     viewModel {
-        OnboardingViewModel()
+        OnboardingViewModel(
+            changeOnboardingStatusUseCase = get()
+        )
     }
 
     viewModel {

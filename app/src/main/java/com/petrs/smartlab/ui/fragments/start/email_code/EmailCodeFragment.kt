@@ -70,11 +70,7 @@ class EmailCodeFragment : BaseFragment<FragmentEmailCodeBinding, EmailCodeViewMo
                 it.isEnabled = false
             }
             btnBack.setOnClickListener {
-                while (true) {
-                    if (findNavController().currentDestination?.id != R.id.signInFragment)
-                        findNavController().popBackStack()
-                    else break
-                }
+                findNavController().popBackStack()
             }
         }
     }

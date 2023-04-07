@@ -11,16 +11,15 @@ import com.petrs.smartlab.*
 import com.petrs.smartlab.data.ErrorType
 import com.petrs.smartlab.databinding.FragmentOrderRegisterBinding
 import com.petrs.smartlab.domain.DomainResult
-import com.petrs.smartlab.domain.LoadingState
-import com.petrs.smartlab.ui.activities.main.MainActivity
 import com.petrs.smartlab.ui.base.BaseFragment
 import com.petrs.smartlab.ui.base.error_dialog.ErrorDialog
 import com.petrs.smartlab.ui.base.error_dialog.ErrorDialogParams
 import com.petrs.smartlab.ui.base.loading_dialog.LoadingDialog
+import com.petrs.smartlab.ui.fragments.main.order_register.dialogs.AddressBottomSheetDialogParams
+import com.petrs.smartlab.ui.fragments.main.order_register.dialogs.FragmentAddressBottomSheetDialog
 import com.petrs.smartlab.ui.fragments.main.order_register.models.CartItem
 import com.petrs.smartlab.ui.fragments.main.order_register.models.PatientItem
 import com.petrs.smartlab.utils.network.State
-import kotlinx.coroutines.delay
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class OrderRegisterFragment : BaseFragment<FragmentOrderRegisterBinding, OrderRegisterViewModel>(

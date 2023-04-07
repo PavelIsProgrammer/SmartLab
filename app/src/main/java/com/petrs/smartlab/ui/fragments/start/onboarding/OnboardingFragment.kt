@@ -5,6 +5,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayoutMediator
 import com.petrs.smartlab.R
 import com.petrs.smartlab.databinding.FragmentOnboardingBinding
+import com.petrs.smartlab.domain.DomainResult
 import com.petrs.smartlab.ui.base.BaseFragment
 import com.petrs.smartlab.ui.fragments.start.onboarding.pager.OnboardingPagerAdapter
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -26,7 +27,7 @@ class OnboardingFragment : BaseFragment<FragmentOnboardingBinding, OnboardingVie
             ) { _, _ -> }.attach()
 
             btnSkip.setOnClickListener {
-                findNavController().navigate(OnboardingFragmentDirections.actionOnboardingFragmentToSignInFragment())
+                viewModel.changeOnboardingStatus()
             }
 
             vpOnboarding.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
@@ -44,6 +45,15 @@ class OnboardingFragment : BaseFragment<FragmentOnboardingBinding, OnboardingVie
                     binding.btnSkip.setText(R.string.text_finish)
                 } else {
                     binding.btnSkip.setText(R.string.text_skip)
+                }
+            }
+            onboardingStatus.observe { result ->
+                when (result) {
+                    is DomainResult.Error -> {}
+                    is DomainResult.Loading -> {}
+                    is DomainResult.Success -> {
+                        findNavController().navigate(OnboardingFragmentDirections.actionOnboardingFragmentToSignInFragment())
+                    }
                 }
             }
         }
